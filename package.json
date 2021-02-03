@@ -1,0 +1,137 @@
+{
+  "name": "next-boilerplate",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "lint": "yarn lint:eslint && yarn lint:prettier",
+    "lint:eslint": "eslint ./src",
+    "lint:prettier": "prettier --check ./src",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.2.4",
+    "next": "10.0.6",
+    "postcss": "^8.2.4",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "tailwindcss": "^2.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.22",
+    "@types/react": "^17.0.1",
+    "@typescript-eslint/eslint-plugin": "^4.14.2",
+    "@typescript-eslint/parser": "^4.14.2",
+    "eslint": "^7.19.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "prettier": "^2.2.1",
+    "typescript": "^4.1.3"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true,
+      "es6": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 8
+    },
+    "ignorePatterns": [
+      "node_modules/*",
+      ".next/*",
+      ".out/*",
+      "!.prettierrc.js"
+    ],
+    "extends": [
+      "eslint:recommended"
+    ],
+    "plugins": [
+      "simple-import-sort"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.ts",
+          "**/*.tsx"
+        ],
+        "parser": "@typescript-eslint/parser",
+        "settings": {
+          "react": {
+            "version": "detect"
+          }
+        },
+        "env": {
+          "browser": true,
+          "node": true,
+          "es6": true
+        },
+        "extends": [
+          "eslint:recommended",
+          "plugin:@typescript-eslint/recommended",
+          "plugin:react/recommended",
+          "plugin:react-hooks/recommended",
+          "plugin:jsx-a11y/recommended",
+          "prettier/@typescript-eslint",
+          "plugin:prettier/recommended"
+        ],
+        "rules": {
+          "react/prop-types": "off",
+          "react/react-in-jsx-scope": "off",
+          "jsx-a11y/anchor-is-valid": "off",
+          "@typescript-eslint/no-unused-vars": [
+            "error"
+          ],
+          "@typescript-eslint/explicit-module-boundary-types": "off",
+          "prettier/prettier": [
+            "error",
+            {},
+            {
+              "usePrettierrc": true
+            }
+          ],
+          "simple-import-sort/imports": [
+            "error",
+            {
+              "groups": [
+                [
+                  "^react",
+                  "^@?\\w",
+                  "^\\u0000"
+                ],
+                [
+                  "^.+\\.jpg$",
+                  "^.+\\.png$",
+                  "^.+\\.svg$"
+                ],
+                [
+                  "^\\."
+                ],
+                [
+                  "^.+\\.s?css$"
+                ],
+                [
+                  "^"
+                ]
+              ]
+            }
+          ],
+          "simple-import-sort/exports": "error"
+        }
+      }
+    ]
+  },
+  "prettier": {
+    "semi": false,
+    "trailingComma": "es5",
+    "singleQuote": true,
+    "printWidth": 140,
+    "tabWidth": 2,
+    "useTabs": false
+  }
+}
