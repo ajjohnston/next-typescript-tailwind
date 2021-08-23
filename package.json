@@ -11,7 +11,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "autoprefixer": "^10.3.1",
+    "autoprefixer": "^10.3.2",
     "next": "11.1.0",
     "postcss": "^8.3.6",
     "react": "17.0.2",
